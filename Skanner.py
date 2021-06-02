@@ -8,9 +8,9 @@ def tcp_scan(ip,port):
     sock.settimeout(0.5)
     try :
         sock.connect((ip,port))
-        print("[+] TCP Port: " +str(port) + " Open")
+        print(" TCP Port: " +str(port) + " Open")
     except:
-        print("[+] TCP Port: " +str(port) + " CLOSED\n")
+        print(" TCP Port: " +str(port) + " Close\n")
 
 
 
@@ -45,7 +45,7 @@ def main():
         isUdp = args.udp
         check_req(ipaddress, port, isUdp)
     except:
-        print(" No Arugments Supplied\n example: python Skanner.py -a 192.168.43.224 -p 21,22,80")
+        print(" No Arugments Supplied\n example: python Skanner.py -a 127.0.0.1 -p 11,17,8071")
 
 if __name__ == "__main__":
     main()
